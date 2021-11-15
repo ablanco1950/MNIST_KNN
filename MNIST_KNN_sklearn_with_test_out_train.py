@@ -1,20 +1,22 @@
 import numpy as np
 import pandas as pd
-
+import time
 
 from sklearn.neighbors import KNeighborsClassifier
-
+inicio=time.time()
 arr=[]
 arry=[]
-Start=1
-ContaMax=100;
+StartTest=1
+ContMaxTest=100;
+StartTraining=1
+ContMaxTraining=60000
 f=open("C:\\mnist_test.csv","r")
 
 Conta=0;
 for linea in f:
     Conta=Conta+1
-    if Conta<=Start: continue
-    if Conta > ContaMax :break
+    if Conta<=StartTest: continue
+    if Conta > ContMaxTest :break
     lineadelTrain =linea.split(",")
    
  
@@ -35,14 +37,14 @@ X_test=np.array(arr)
 
 Y_test=np.array(arry)
 
-ContaMax=60000;
+ContMaxTraining=6000;
 f=open("C:\\mnist_train.csv","r")
 
 Conta=0;
 for linea in f:
     Conta=Conta+1
     if Conta==1: continue
-    if Conta > ContaMax :break
+    if Conta > ContMaxTraining :break
     lineadelTrain =linea.split(",")
   
  
@@ -72,6 +74,7 @@ Y_predict, pred_test = [np.zeros(n_train), np.zeros(n_test)]
 #######################################################################333
 #KNN NEIGHBOR
 ######################################################################333
+Inicio2=time.time()
 model = KNeighborsClassifier(n_neighbors=3)
 
 model.fit(X_train, Y_train)
@@ -116,6 +119,11 @@ print("")
 print("RESULTS FOR KNN")     
 print("Total Hits TEST = " + str(TotAciertos))
 print("Total Failures TEST = " + str(TotFallos))
+Fin2=time.time()
 
+  
+print ( "procesing time of " + str(ContMaxTest - StartTest) + "  images = "  + str(Fin2 - Inicio2))
+print( "Average processing time per image = " + str((Fin2 - Inicio2)/(ContMaxTest - StartTest))) 
+print ("")
 
 
