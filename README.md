@@ -25,4 +25,5 @@ https://www.kaggle.com/oddrationale/mnist-in-csv
 Projects on MNIST that make use of the classifier based on neural networks:
 
 https://github.com/louisjc/mnist-neural-network/blob/master/neural_net.py
+
 https://github.com/kdexd/digit-classifier
