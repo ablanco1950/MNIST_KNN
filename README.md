@@ -20,6 +20,7 @@ Sensitivity tests have been done by processing the mnist_test20.csv file, it is 
 References:
 
 https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+
 https://www.kaggle.com/oddrationale/mnist-in-csv
 
 Projects on MNIST that make use of the classifier based on neural networks:
