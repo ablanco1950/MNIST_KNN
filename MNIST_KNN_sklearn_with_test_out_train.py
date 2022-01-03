@@ -1,5 +1,5 @@
 import numpy as np
-import pandas as pd
+
 import time
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -9,6 +9,7 @@ arry=[]
 StartTest=1
 ContMaxTest=100;
 StartTraining=1
+# should be, ContMaxTraining=60000, limit memory
 ContMaxTraining=60000
 f=open("C:\\mnist_test.csv","r")
 
@@ -37,7 +38,7 @@ X_test=np.array(arr)
 
 Y_test=np.array(arry)
 
-ContMaxTraining=6000;
+
 f=open("C:\\mnist_train.csv","r")
 
 Conta=0;
@@ -61,9 +62,7 @@ for linea in f:
     arry.append(lineadelTrain[0])
     
 
-x=np.array(arr)
 
-y=np.array(arry)
 X_train=np.array(arr)
 
 Y_train=np.array(arry)
