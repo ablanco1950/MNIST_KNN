@@ -17,6 +17,10 @@ It can give problems of lack of memory in low-performance computers, despite the
 
 Sensitivity tests have been done by processing the mnist_test20.csv file, it is enough to change the file assignment of line 11, which gives 20 hits and 0 failures and then processed the mnist_test20_bad.csv, which is the mnist_test20.csv with the classes of the last three registers changed, verifying that 17 hits and 3 failures appear, that is, errors entered are detected. both files are accompanied.
 
+Comparing acuracy with others models from sklearn:
+
+https://github.com/ablanco1950/ABALONE_DECISIONTREE_C4-5/blob/main/GBT2.ipynb
+
 References:
 
 https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
