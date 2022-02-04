@@ -13,7 +13,7 @@ The program is run from Spyder:
 MNIST_KNN_sklearn_with_test_out_train.py
 
 The program is adapted to follow-up one by one of the test images, instead of a global calculation of the hit rate.
-It can give problems of lack of memory in low-performance computers, despite the fact that the margin of test files records is reduced from 1 to 100. By changing the value of ContaMax to 10000 in line 10, the 10000 records of the test file mnist_test.csv would be processed, in case you have a computer and a python version that overcomes the out of memory problems.
+It can give problems of lack of memory in low-performance computers, but the margin of test files records may be reduced by changing the value of ContaMax from 10000 in line 10.
 
 Sensitivity tests have been done by processing the mnist_test20.csv file, it is enough to change the file assignment of line 11, which gives 20 hits and 0 failures and then processed the mnist_test20_bad.csv, which is the mnist_test20.csv with the classes of the last three registers changed, verifying that 17 hits and 3 failures appear, that is, errors entered are detected. both files are accompanied.
 
