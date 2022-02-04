@@ -7,7 +7,7 @@ inicio=time.time()
 arr=[]
 arry=[]
 StartTest=1
-ContMaxTest=100;
+ContMaxTest=10000;
 StartTraining=1
 # should be, ContMaxTraining=60000, limit memory
 ContMaxTraining=60000
@@ -104,11 +104,11 @@ for i in range (len(Y_predict_test)):
           Cadena=Cadena + "*"
        ContColumna=ContColumna +1
        if ContColumna== 28:
-             print(Cadena)
+   #          print(Cadena)
              Cadena=""
              ContColumna=0  
-    print ("Predicted class= "+ str(Y_predict_test[i]) + " True class ="
-             +  str(Y_test_arr[i]))
+   # print ("Predicted class= "+ str(Y_predict_test[i]) + " True class ="
+   #          +  str(Y_test_arr[i]))
     if (Y_predict_test[i]==Y_test_arr[i]):
         TotAciertos=TotAciertos+1
     else:
